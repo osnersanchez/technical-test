@@ -1,0 +1,125 @@
+@import "../../../../assets/scss/variables.scss";
+
+.product {
+  border-radius: 0;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  padding: 20px 50px 20px 0;
+  background-color: white;
+  border-bottom: thin solid #eee;
+  text-decoration: none;
+
+  &__image-container {
+    height: 100%;
+    width: 300px;
+  }
+
+  &__image {
+    max-width: 100%;
+  }
+
+  &__details {
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &__link {
+    color: #333;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+
+  &__pricing {
+    margin-top: 10px;
+  }
+
+  &__price-original {
+    text-decoration: line-through;
+    font-weight: 400;
+    line-height: 1.25;
+    color: #999;
+    font-size: 10px;
+  }
+
+  &__price-current {
+    display: flex;
+    gap: 5px;
+  }
+
+  &__price-sale {
+    color: #333;
+    display: flex;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.25;
+  }
+
+  &__discount {
+    color: #00a650;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  &__installments {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+  }
+
+  &__installments-value {
+    color: #00a650;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  &__shipping-info {
+    background: #00a650;
+    color: #ffffff;
+    padding: 0 4px;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    padding: 1px 4px;
+    border-radius: 2px;
+  }
+
+  &__shipping-icons {
+    display: flex;
+    gap: 5px;
+    margin: 7px 0;
+  }
+
+  &__icon-label {
+    font-weight: 500;
+    &--full {
+      color: #3483fa;
+    }
+
+    &--supermarket {
+      color: #c60f0f;
+    }
+  }
+  &__content-promotion {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &-label {
+    color: #737373;
+    bottom: 1px;
+    right: -22px;
+    font-size: 14px;
+  }
+}
+
+@include respond-to($small-screen) {
+  .product {
+    &__image-container {
+      width: auto;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import '../../../../../assets/scss/variables.scss';
+
+:host {
+  padding: 0 200px;
+  display: block;
+}
+
+.container {
+  display: flex;
+  gap: 32px;
+}
+
+.product-cards {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.summary {
+  height: 100%;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 16px;
+  margin-top: 0;
+  padding: 20px 24px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 32px;
+  width: 360px;
+  z-index: 10;
+  &__divider {
+    margin-bottom: 10px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  &__action {
+    margin-top: 10px;
+  }
+  &__button {
+    width: 100%;
+  }
+}
+
+@include respond-to($small-screen) {
+  :host {
+    padding: 20px;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .summary {
+    width: auto;
+  }
+}

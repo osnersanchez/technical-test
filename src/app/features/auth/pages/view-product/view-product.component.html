@@ -1,0 +1,70 @@
+<app-back-button />
+@if(product.id) {
+<div class="product">
+  <div class="product__image">
+    <img
+      [src]="product.imgUrl"
+      alt="product"
+      class="product__image-responsive"
+    />
+  </div>
+  <div class="product__content">
+    <div class="product__header">
+      <span class="product__header__new-badge">Nuevo</span>
+      <h1 class="product__header__main-title">
+        {{ product.name }}
+      </h1>
+    </div>
+    <div class="product__price">
+      <span class="product__price__amount">{{ product.price }}</span>
+      <div class="product__price__details">
+        <span class="product__price__details__preposition">En</span>
+        <span class="product__price__details__installments">
+          48x ${{ product.price }} sin intereses
+        </span>
+      </div>
+      <a href="#" class="product__price__link">Ver los medios de pago</a>
+    </div>
+    <div class="product__delivery">
+      <span class="product__delivery__date">Llega gratis mañana</span>
+      <div class="product__delivery__details">
+        <span class="product__delivery__details__condition">Vendido en el</span>
+        <span class="product__delivery__details__time">proximo minuto</span>
+      </div>
+    </div>
+    <div class="product__features">
+      <span class="product__features__label">Descripción:</span>
+      <span class="product__features__value">{{ product.description }}</span>
+    </div>
+    <div class="product__purchase">
+      <div class="product__quantity">
+        <label for="quantity" class="product__quantity__label">Cantidad</label>
+        <input
+          matInput
+          type="number"
+          id="quantity"
+          min="1"
+          [formControl]="quantityControl"
+          class="product__quantity__input"
+        />
+      </div>
+      <button
+        class="product__add-to-cart-button"
+        mat-flat-button
+        color="primary"
+        (click)="addProduct()"
+      >
+        <span class="product__add-to-cart-button__text"
+          >Agregar al carrito</span
+        >
+      </button>
+      <div class="product__seller">
+        <span class="product__seller__label">Vendido por</span>
+        <span class="product__seller__name">OSI42</span>
+      </div>
+    </div>
+  </div>
+</div>
+} @else {
+<app-skeleton-detail />
+}

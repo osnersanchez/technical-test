@@ -1,0 +1,104 @@
+@import "../../../../assets/scss/variables.scss";
+.product {
+  background: white;
+
+  &__image-responsive {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__container {
+    display: flex;
+
+    &__info {
+      flex: 1;
+      padding: 24px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &__header {
+        &__category {
+          color: #c60f0f;
+          font-weight: 500;
+        }
+      }
+
+      &__actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+        font-size: 16px;
+        font-weight: 500;
+
+        &__button {
+          color: #3483fa;
+          cursor: pointer;
+          text-decoration: none;
+        }
+      }
+    }
+
+    &__image {
+      width: 300px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__stock {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+
+    &__availability {
+      font-size: 16px;
+      color: #3483fa;
+    }
+
+    &__price {
+      &__discount {
+        font-size: 13px;
+
+        &__percentage {
+          color: #00a650;
+          margin-right: 5px;
+        }
+
+        &__old-price {
+          color: rgba(0, 0, 0, 0.55);
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+
+  &__shipping {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    &__label {
+      font-weight: 300;
+    }
+
+    &__value {
+      font-weight: 500;
+      color: #00a650;
+    }
+  }
+}
+
+
+
+@include respond-to($small-screen) {
+.product{
+  &.container{
+    flex-direction: column;
+  }
+}
+}

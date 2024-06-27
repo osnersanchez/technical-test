@@ -1,0 +1,188 @@
+<div class="container">
+  <div class="register">
+    <div class="register__description">
+      <img src="assets\images\logo.webp" alt="logo" class="register__image" />
+      <h1 class="register__title">Crear una Cuenta en Nisum Test Store</h1>
+      <h3 class="register__subtitle">Introduce tus Datos Personales</h3>
+    </div>
+    <form
+      [formGroup]="personalInfoForm"
+      class="register__form"
+      (ngSubmit)="onSubmit()"
+    >
+      <div class="register__group">
+        <div class="register__field">
+          <mat-form-field
+            appearance="outline"
+            class="register__input-container"
+          >
+            <mat-label>Nombre</mat-label>
+            <input
+              matInput
+              formControlName="name"
+              required
+              type="text"
+              class="register__input"
+            />
+            <mat-error
+              *ngIf="personalInfoForm.controls['name'].hasError('required')"
+            >
+              Debes ingresar un nombre.
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="register__field">
+          <mat-form-field
+            appearance="outline"
+            class="register__input-container"
+          >
+            <mat-label>Apellido</mat-label>
+            <input
+              matInput
+              formControlName="lastName"
+              required
+              type="text"
+              class="register__input"
+            />
+            <mat-error
+              *ngIf="personalInfoForm.controls['lastName'].hasError('required')"
+            >
+              Debes ingresar un apellido.
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      @if (personalInfoForm.valid ) {
+      <div [formGroup]="contactInfoForm" class="register__group">
+        <mat-divider class="register__divider"></mat-divider>
+        <h3 class="register__subtitle">Datos de Contacto</h3>
+        <div class="register__field">
+          <mat-form-field
+            appearance="outline"
+            class="register__input-container"
+          >
+            <mat-label>Dirección (Opcional)</mat-label>
+            <input
+              matInput
+              formControlName="direction"
+              type="text"
+              class="register__input"
+            />
+          </mat-form-field>
+        </div>
+        <div class="register__field">
+          <mat-form-field
+            appearance="outline"
+            class="register__input-container"
+          >
+            <mat-label>Celular</mat-label>
+            <input
+              matInput
+              formControlName="cellphone"
+              required
+              class="register__input"
+            />
+            <mat-icon matSuffix>phone_android</mat-icon>
+            <mat-error
+              *ngIf="contactInfoForm.controls['cellphone'].hasError('pattern')"
+            >
+              Debes ingresar un celular de Colombia.
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="register__field">
+          <mat-form-field
+            appearance="outline"
+            class="register__input-container"
+          >
+            <mat-label>Correo electrónico</mat-label>
+            <input
+              matInput
+              formControlName="email"
+              required
+              email
+              class="register__input"
+            />
+            <mat-error
+              *ngIf="contactInfoForm.controls['email'].hasError('required')"
+            >
+              Debes ingresar un correo electrónico.
+            </mat-error>
+            <mat-error
+              *ngIf="contactInfoForm.controls['email'].hasError('email')"
+            >
+              Esto no parece un correo electrónico válido.
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      } @if (personalInfoForm.valid && contactInfoForm.valid) {
+      <div [formGroup]="passwordForm" class="register__group">
+        <mat-divider class="register__divider"></mat-divider>
+        <h3 class="register__subtitle">Clave de Seguridad</h3>
+        <div class="register__field">
+          <mat-form-field
+            appearance="outline"
+            class="register__input-container"
+          >
+            <mat-label>Contraseña</mat-label>
+            <input
+              matInput
+              formControlName="password"
+              required
+              type="password"
+              class="register__input"
+            />
+            <mat-error
+              *ngIf="passwordForm.controls['password'].hasError('required')"
+            >
+              Debes ingresar una contraseña.
+            </mat-error>
+            <mat-error
+              *ngIf="passwordForm.controls['password'].hasError('pattern')"
+            >
+              La contraseña debe tener al menos 8 caracteres, una mayúscula, una
+              minúscula y un número.
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="register__field">
+          <mat-form-field
+            appearance="outline"
+            class="register__input-container"
+          >
+            <mat-label>Confirmar Contraseña</mat-label>
+            <input
+              matInput
+              formControlName="confirmPassword"
+              required
+              type="password"
+              class="register__input"
+            />
+            <mat-error
+              *ngIf="
+                passwordForm.controls['confirmPassword'].hasError('notSame')
+              "
+            >
+              Las contraseñas no coinciden.
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      }
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="
+          !personalInfoForm.valid ||
+          !contactInfoForm.valid ||
+          !passwordForm.valid
+        "
+        class="register__submit-button"
+      >
+        Registrarse
+      </button>
+    </form>
+  </div>
+</div>

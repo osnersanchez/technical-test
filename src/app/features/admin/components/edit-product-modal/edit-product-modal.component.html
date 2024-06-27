@@ -1,0 +1,68 @@
+<h2 mat-dialog-title>Editar Producto</h2>
+<mat-dialog-content>
+  <form
+    id="form-product"
+    class="content-from"
+    [formGroup]="editForm"
+    (submit)="save()"
+  >
+    <mat-form-field>
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="name" />
+      @if (editForm.controls.name.invalid) {
+      <mat-error>Invalid field</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Precio</mat-label>
+      <input matInput type="number" formControlName="price" />
+      @if (editForm.controls.price.invalid) {
+      <mat-error>Invalid field</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Imagen</mat-label>
+      <input matInput type="url" formControlName="imgUrl" />
+      @if (editForm.controls.imgUrl.invalid) {
+      <mat-error>Invalid field</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Rating</mat-label>
+      <input matInput type="number" formControlName="rating" />
+      @if (editForm.controls.rating.invalid) {
+      <mat-error>Invalid field</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Stock</mat-label>
+      <input matInput type="number" formControlName="stock" />
+      @if (editForm.controls.stock.invalid) {
+      <mat-error>Invalid field</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Categoría</mat-label>
+      <mat-select formControlName="category">
+        <mat-option value="vegetable">Verdura</mat-option>
+        <mat-option value="fruit">Fruta</mat-option>
+      </mat-select>
+      @if (editForm.controls.category.invalid) {
+      <mat-error>Invalid field</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Descripcion</mat-label>
+      <textarea matInput formControlName="description"></textarea>
+      @if (editForm.controls.description.invalid) {
+      <mat-error>Invalid field</mat-error>
+      }
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions class="actions-content">
+  <button mat-button (click)="onCancel()">Cancelar</button>
+  <button mat-button form="form-product" color="primary" cdkFocusInitial>
+    Guardar
+  </button>
+</mat-dialog-actions>

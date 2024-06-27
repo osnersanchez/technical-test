@@ -1,0 +1,72 @@
+@import "../../../../../assets/scss/variables.scss";
+
+.container {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.register {
+  display: flex;
+  justify-content: center;
+  width: 840px;
+  background-color: white;
+  padding: 108px 36px 36px 36px;
+  border-radius: 28px;
+  position: relative;
+
+  &__description {
+    width: 50%;
+  }
+  &__divider {
+    margin-bottom: 10px;
+  }
+  &__register {
+    color: #0b57d0;
+    cursor: pointer;
+  }
+  &__recomendation {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  &__image {
+    width: 120px;
+    position: absolute;
+    top: 10px;
+    left: 13px;
+  }
+  &__form {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__field {
+    width: 100%;
+  }
+
+  &__input-container {
+    width: 100%;
+  }
+}
+
+@include respond-to($small-screen) {
+  .container {
+    width: auto;
+    margin: 50px 20px;
+  }
+  .register {
+    flex-direction: column;
+    width: auto;
+    &__form {
+      width: 100%;
+    }
+    &__description {
+      width: 100%;
+    }
+  }
+}

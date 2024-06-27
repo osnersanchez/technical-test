@@ -1,0 +1,38 @@
+@import "../../../../assets/scss/variables.scss";
+
+:host {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.logo-container {
+  margin-right: 16px;
+
+  img {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.12);
+    width: 150px;
+    height: auto;
+  }
+}
+
+.user-info-container {
+  margin-left: 16px;
+}
+
+@include respond-to($small-screen) {
+  .user-info-container {
+    margin-left: 0;
+    font-size: 14px;
+  }
+
+  .logo-container img {
+    width: 75px;
+    height: auto;
+  }
+}

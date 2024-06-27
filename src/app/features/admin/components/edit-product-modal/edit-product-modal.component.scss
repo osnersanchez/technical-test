@@ -1,0 +1,34 @@
+@import "../../../../../assets/scss/variables.scss";
+
+.content-from {
+  display: flex;
+  flex-direction: column;
+  padding: 0 50px;
+}
+
+.actions-content {
+  display: flex;
+  justify-content: end;
+  padding: 15px 80px;
+  gap: 20px;
+}
+
+@include respond-to($small-screen) {
+  mat-form-field {
+    width: 100%;
+  }
+
+  mat-dialog-actions {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .content-from {
+    padding: 0 5px;
+  }
+
+  .actions-content {
+    padding: 15px 20px;
+  }
+}

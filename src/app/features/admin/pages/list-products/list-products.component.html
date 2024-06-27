@@ -1,0 +1,38 @@
+<div>
+  <mat-form-field class="search-form-field">
+    <mat-label>Buscar producto...</mat-label>
+    <input matInput type="text" [formControl]="searchControl" />
+    @if (searchControl.value) {
+    <button
+      matSuffix
+      mat-icon-button
+      aria-label="Clear"
+      (click)="searchControl.setValue('')"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+    }
+  </mat-form-field>
+
+  <div class="product-cards">
+    <app-edit-product-card
+      *ngFor="
+        let product of products | filterProduct : searchControl.value || ''
+      "
+      [productCart]="product"
+      [isAdmin]="true"
+      (deleteProduct)="deleteProduct($event)"
+      (editProduct)="openAddModal($event)"
+    ></app-edit-product-card>
+  </div>
+
+  <button
+    (click)="openAddModal()"
+    class="button-container"
+    mat-mini-fab
+    color="primary"
+    aria-label="Example icon button with a plus one icon"
+  >
+    <mat-icon>plus_one</mat-icon>
+  </button>
+</div>

@@ -1,0 +1,191 @@
+{
+  "login": [
+    {
+      "id": "test@test.com",
+      "name": "Usuario",
+      "lastName": "Test",
+      "uuid": "1719449739378",
+      "token": "1715844745183"
+    },
+    {
+      "id": "admin@test.com",
+      "name": "Sistem",
+      "lastName": "Admin",
+      "uuid": "1716649910646",
+      "token": "1718509032411"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Manzana",
+      "price": 1.5,
+      "stock": 100,
+      "description": "Manzana fresca y jugosa",
+      "rating": 4.5,
+      "category": "fruta",
+      "imgUrl": "https://th.bing.com/th/id/R.8558e156de448a280d489af540af7700?rik=8xc66llq3q8hlQ&riu=http%3a%2f%2fpngimg.com%2fuploads%2fapple%2fapple_PNG12405.png&ehk=1QYlrxUD9Canji%2bd6Al3MZZvDH%2fdl1MuChmNOHoG4Ig%3d&risl=1&pid=ImgRaw&r=0"
+    },
+    {
+      "id": "2",
+      "name": "Plátano",
+      "price": 1.2,
+      "stock": 80,
+      "description": "Plátano maduro y dulce",
+      "rating": 4.2,
+      "category": "fruta",
+      "imgUrl": "https://www.vidasaludable.fit/wp-content/uploads/2021/03/platano.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Zanahoria",
+      "price": 0.8,
+      "stock": 120,
+      "description": "Zanahoria fresca y crujiente",
+      "rating": 4,
+      "category": "vegetal",
+      "imgUrl": "https://th.bing.com/th/id/OIP.g_dX1u17vFk5PlNj5HHxJwHaHZ?w=613&h=612&rs=1&pid=ImgDetMain"
+    },
+    {
+      "id": "4",
+      "name": "Lechuga",
+      "price": 1,
+      "stock": 90,
+      "description": "Lechuga verde y fresca",
+      "rating": 4.3,
+      "category": "vegetal",
+      "imgUrl": "https://th.bing.com/th/id/R.b4824cd306f2f190fa767128635160af?rik=n1laC%2fA6TTEcfw&riu=http%3a%2f%2fwww.agrodiario.hn%2fwp-content%2fuploads%2f2020%2f11%2flechuga.jpg&ehk=8O%2foLcBkZoA6%2bndMjZ6qMEIYoz3hRp390c9B5sDo814%3d&risl=&pid=ImgRaw&r=0"
+    },
+    {
+      "id": "5",
+      "name": "Naranja",
+      "price": 1.3,
+      "stock": 110,
+      "description": "Naranja jugosa y llena de vitamina C",
+      "rating": 4.4,
+      "category": "fruta",
+      "imgUrl": "https://th.bing.com/th/id/R.3fd956996ee5ce2779b0a1d4e86221fc?rik=IevbPk6uVnjppw&riu=http%3a%2f%2fquimifrac.com%2fwp-content%2fuploads%2fnaranja1.jpg&ehk=GSi%2bWMxLMnVearMzIWURh7SvE5MjwRJEdIW76q%2fdeLM%3d&risl=&pid=ImgRaw&r=0"
+    },
+    {
+      "id": "6",
+      "name": "Papa",
+      "price": 0.9,
+      "stock": 95,
+      "description": "Papa fresca y versátil",
+      "rating": 4.1,
+      "category": "vegetal",
+      "imgUrl": "https://th.bing.com/th/id/R.106ea26fd6948f3c845e589878f7fa91?rik=SjWdPbxMQd4fdA&riu=http%3a%2f%2fwww.experimentosfaciles.com%2fwp-content%2fuploads%2f2016%2f08%2fpapa.jpg&ehk=MGXc07bgrKXb8pIdxB1FOSSEA8jW%2b1BhjLa0SQycaHs%3d&risl=&pid=ImgRaw&r=0"
+    },
+    {
+      "id": "7",
+      "name": "Fresa",
+      "price": 2,
+      "stock": 75,
+      "description": "Fresa dulce y deliciosa",
+      "rating": 4.6,
+      "category": "fruta",
+      "imgUrl": "https://th.bing.com/th/id/R.0219fa056b3c00fa135934b2924fa486?rik=OdpherONLD7Ldg&riu=http%3a%2f%2fmetodonovaline.com%2fwp-content%2fuploads%2f2018%2f07%2fBENEFICIOS-DE-LAS-FRESAS-PARA-LA-SALUD.jpg&ehk=7qBvNk6wd71x2rPaMX3NwYRUMSyyMGZctlR8XjmSMVg%3d&risl=&pid=ImgRaw&r=0"
+    },
+    {
+      "id": "8",
+      "name": "Tomate",
+      "price": 1.1,
+      "stock": 105,
+      "description": "Tomate rojo y sabroso",
+      "rating": 4.2,
+      "category": "vegetal",
+      "imgUrl": "https://www.lovemysalad.com/sites/default/files/tomates_-_vladimir_morozov.jpg"
+    },
+    {
+      "id": "9",
+      "name": "Uva",
+      "price": 2.5,
+      "stock": 85,
+      "description": "Uva fresca y jugosa",
+      "rating": 4.5,
+      "category": "fruta",
+      "imgUrl": "https://thumbs.dreamstime.com/b/filiale-fresca-dell-uva-rossa-18666759.jpg"
+    },
+    {
+      "id": "10",
+      "name": "Espinaca",
+      "price": 1.2,
+      "stock": 100,
+      "description": "Espinaca verde y nutritiva",
+      "rating": 4,
+      "category": "vegetal",
+      "imgUrl": "https://th.bing.com/th/id/OIP.IOJ4smc6lqfmOHp0Y7EmqAHaGo?rs=1&pid=ImgDetMain"
+    },
+    {
+      "id": "11",
+      "name": "Mango",
+      "price": 2.2,
+      "stock": 70,
+      "description": "Mango maduro y delicioso",
+      "rating": 4.7,
+      "category": "fruta",
+      "imgUrl": "https://th.bing.com/th/id/OIP.GqqWLmKBZrwrWWFRPIFFEQHaHa?rs=1&pid=ImgDetMain"
+    },
+    {
+      "id": "12",
+      "name": "Brócoli",
+      "price": 1.3,
+      "stock": 95,
+      "description": "Brócoli fresco y saludable",
+      "rating": 4.3,
+      "category": "vegetal",
+      "imgUrl": "https://th.bing.com/th/id/R.9944bf8c210ffef4e5c30f67da13baa4?rik=8jzZsfNSU6UwJg&riu=http%3a%2f%2fwww.dietasdeportivas.com%2fwp-content%2fuploads%2f2015%2f03%2fBrocoli-dietas.jpg&ehk=MkVPOZD4jd43XogAUg2SXfcooXrZLlV36r1UKQeQDwQ%3d&risl=&pid=ImgRaw&r=0"
+    },
+    {
+      "id": "13",
+      "name": "Pera",
+      "price": 1.8,
+      "stock": 80,
+      "description": "Pera jugosa y refrescante",
+      "rating": 4.4,
+      "category": "fruta",
+      "imgUrl": "https://th.bing.com/th/id/R.27801e9a1a2b240fa2500f4bb72bede8?rik=st%2flz9%2fJB23WeQ&riu=http%3a%2f%2fimagenes.4ever.eu%2fdata%2fdownload%2fnaturaleza%2fplantas%2ffrutas%2fpera-221822.jpg%3fno-logo&ehk=uLERrTvyGxEh8s%2fzga69H9Puj2HhukIF4kCmizr28gc%3d&risl=&pid=ImgRaw&r=0"
+    },
+    {
+      "id": "14",
+      "name": "Calabacín",
+      "price": 1,
+      "stock": 110,
+      "description": "Calabacín fresco y versátil",
+      "rating": 4.1,
+      "category": "vegetal",
+      "imgUrl": "https://th.bing.com/th/id/R.9257f005f0ec171a3566f97c43b66606?rik=mVJo9CkViIGvGA&riu=http%3a%2f%2felhortal.webcindario.com%2fimag%2fCalabacingd.jpg&ehk=Q2GUt3nGpTzA5X8KRA5E%2bW6kPU%2fTm7jVWusPV8xvj4I%3d&risl=&pid=ImgRaw&r=0"
+    },
+    {
+      "id": "15",
+      "name": "Kiwi",
+      "price": 1.6,
+      "stock": 90,
+      "description": "Kiwi exótico y delicioso",
+      "rating": 4.6,
+      "category": "fruta",
+      "imgUrl": "https://th.bing.com/th/id/R.ff928d30396c402b78f4ad4a86f14c27?rik=DqHt%2fVAIQyO2%2bw&riu=http%3a%2f%2fwww.fmdos.cl%2fwp-content%2fuploads%2f2015%2f06%2fkiwi_1.jpg&ehk=sBHYC7vfh6iftL%2b%2bbuX6ajlfKUTkwp23eRWo2lghFM0%3d&risl=&pid=ImgRaw&r=0"
+    },
+    {
+      "id": "e359",
+      "name": "apio",
+      "price": 21,
+      "description": "apio para comer",
+      "rating": 3,
+      "imgUrl": "https://www.herbazest.com/imgs/4/6/2/751612/apio.jpg",
+      "stock": 123,
+      "category": "vegetable"
+    },
+    {
+      "id": "56f3",
+      "name": "Cebolla",
+      "price": 10,
+      "description": "Cebollas",
+      "rating": 4.2,
+      "imgUrl": "https://www.clarin.com/2016/12/27/Bym_3FWrg_1200x0.jpg",
+      "stock": 150,
+      "category": "vegetable"
+    }
+  ],
+  "shopping-cart": []
+}

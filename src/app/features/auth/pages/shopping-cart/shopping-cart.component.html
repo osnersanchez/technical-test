@@ -1,0 +1,41 @@
+<app-back-button url="/list-product" />
+<div class="container">
+  <div class="product-cards">
+    @for (item of shoppingCard; track $index) {
+    <app-edit-product-card
+      (deleteProduct)="deleteProduct($event)"
+      [productCart]="item.product"
+    />
+    }@empty {
+    <h1>Carrito vacio</h1>
+    }
+  </div>
+  <div class="summary">
+    <h1 class="summary__title">Resumen de compra</h1>
+    <mat-divider class="summary__divider"></mat-divider>
+    <div class="summary__item">
+      <span class="summary__description"
+        >Productos ({{ getTotalProduct() }})</span
+      >
+      <span class="summary__price"> {{ getTotal() | currency }} </span>
+    </div>
+    <div class="summary__item">
+      <span class="summary__description">Envio</span>
+      <span class="summary__price">Gratis</span>
+    </div>
+    <div class="summary__item">
+      <span class="summary__description">Total</span>
+      <span class="summary__price">{{ getTotal() | currency }}</span>
+    </div>
+    <div class="summary__action">
+      <button
+        (click)="toBuy()"
+        class="summary__button"
+        mat-flat-button
+        color="primary"
+      >
+        Comprar
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="content">
+  @if(isLoading) {
+  <app-loading></app-loading>
+  } @else {
+  <mat-form-field class="search-form-field">
+    <mat-icon matPrefix>search</mat-icon>
+    <mat-label>Buscar producto...</mat-label>
+    <input matInput type="text" [formControl]="searchControl" />
+    @if (searchControl.value) {
+    <button
+      matSuffix
+      mat-icon-button
+      aria-label="Clear"
+      (click)="searchControl.setValue('')"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+    }
+  </mat-form-field>
+
+  <cdk-virtual-scroll-viewport
+    itemSize="300"
+    minBufferPx="600"
+    maxBufferPx="900"
+    class="product-cards"
+  >
+    <app-product-card
+      *cdkVirtualFor="
+        let product of products | filterProduct : searchControl.value || ''
+      "
+      [product]="product"
+    ></app-product-card>
+  </cdk-virtual-scroll-viewport>
+
+  <button
+    [routerLink]="['/shopping-cart']"
+    class="button-container"
+    mat-mini-fab
+    color="primary"
+    matTooltip="Ir al carrito"
+    aria-label="shopping button"
+    [matBadge]="totalProductCard"
+    matBadgePosition="before"
+    matBadgeColor="warn"
+    [matBadgeHidden]="totalProductCard < 1"
+  >
+    <mat-icon>shopping_cart</mat-icon>
+  </button>
+  }
+</div>

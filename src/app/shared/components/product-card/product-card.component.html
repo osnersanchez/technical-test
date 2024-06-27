@@ -1,0 +1,57 @@
+<a [routerLink]="'/view-product/' + product.id" class="product">
+  <div class="product__image-container">
+    <img
+      [src]="product.imgUrl"
+      alt="product"
+      class="product__image"
+    />
+  </div>
+  <div class="product__details">
+    <div class="product__link">
+      {{ product.name }}
+    </div>
+    <div class="product__pricing">
+      <span class="product__price-original">
+        $ {{ product.priceBeforeDiscount ?? product.price }}
+      </span>
+      <div class="product__price-current">
+        <h2 class="product__price-sale">${{ product.price }}</h2>
+        <span class="product__discount">
+          {{
+            product.priceBeforeDiscount
+              ? (product.priceBeforeDiscount
+                | discountPercentage : product.price)
+              : "N/A"
+          }}
+          OFF
+        </span>
+      </div>
+      <div class="product__installments">
+        <span class="product__installments-label">en 48x</span>
+        <h4 class="product__installments-value">
+          $ {{ product.price | installmentPayment }}
+        </h4>
+      </div>
+    </div>
+    <div class="product__shipping">
+      <span class="product__shipping-info">Llega gratis mañana</span>
+      <div class="product__shipping-icons">
+        <span class="product__icon-label product__icon-label--full">FULL</span>
+        <span class="product__icon-label product__icon-label--supermarket">
+          SUPERMERCADO
+        </span>
+      </div>
+    </div>
+    @if(product.rating && product.rating>0) {
+    <div class="product__rating">
+      <app-star-raiting
+        [rating]="product.rating"
+        class="product__star-rating"
+      ></app-star-raiting>
+    </div>
+    }
+    <div class="product__content-promotion">
+      <span class="product__content-promotion-label">Promocionado</span>
+    </div>
+  </div>
+</a>
