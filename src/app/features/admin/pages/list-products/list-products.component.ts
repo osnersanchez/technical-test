@@ -59,7 +59,6 @@ export class ListProductsAdminComponent implements OnInit {
       .subscribe((products: ProductData[]) => {
         this.products = products;
         this.isLoading = false;
-        console.log(products);
       });
   }
 

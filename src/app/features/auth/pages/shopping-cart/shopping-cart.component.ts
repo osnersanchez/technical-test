@@ -76,8 +76,6 @@ export class ShoppingCartComponent implements OnInit {
 
   deleteProduct(id: string) {
     this.shoppingCartService.deleteProduct(id).subscribe(() => {
-      // Show message
-      console.log('Success');
       this.getShoppingCart();
     });
   }

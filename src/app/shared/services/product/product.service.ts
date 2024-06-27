@@ -30,7 +30,6 @@ export class ProductService {
 
   getProductById(id: string): Observable<ProductData> {
     const product = this.localProducts.find((el) => el.id === id);
-    console.log(product);
     
     return product
       ? of(product)
@@ -52,8 +51,6 @@ export class ProductService {
     } else {
       this.editProducts.push({ ...product, id });
     }
-    console.log(this.editProducts);
-
     return of('ok');
   }
 

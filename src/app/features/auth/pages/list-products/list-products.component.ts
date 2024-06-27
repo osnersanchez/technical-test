@@ -73,8 +73,6 @@ export class ListProductsComponent implements OnInit {
         })
       )
       .subscribe((products: ProductData[]) => {
-        console.log(products);
-
         this.products = products;
         this.isLoading = false;
         this.error = '';
